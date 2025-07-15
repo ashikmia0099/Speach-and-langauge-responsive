@@ -2,56 +2,67 @@
 
 
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { IoArrowForwardSharp } from 'react-icons/io5'
-import { useAuth } from '../../../../../Context/AuthContext/AuthContext'
+
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { IoArrowForwardSharp } from 'react-icons/io5';
+import { useAuth } from '../../../../../Context/AuthContext/AuthContext';
 import Marquee from "react-fast-marquee";
 import '../localcss/banner1.css';
 
 function Banner2() {
-    const [isClient, setIsClient] = useState(false)
-    const { second_banner_image, setSecBannerImage } = useAuth()
-    const [alternatedSlides, setAlternatedSlides] = useState([])
-    const [isPaused, setIsPaused] = useState(false)
+    const [isClient, setIsClient] = useState(false);
+    const { second_banner_image, setSecBannerImage } = useAuth();
+    const [alternatedSlides, setAlternatedSlides] = useState([]);
+    const [isPaused, setIsPaused] = useState(false);
 
     useEffect(() => {
         fetch('https://speach-and-langauge-responsive.vercel.app/Banner_sec_api')
             .then(res => res.json())
             .then(data => {
-                setSecBannerImage(data)
-                organizeSlides(data)
-            })
-    }, [])
+                setSecBannerImage(data);
+                organizeSlides(data);
+            });
+    }, []);
 
     useEffect(() => {
-        setIsClient(true)
-    }, [])
+        setIsClient(true);
+    }, []);
 
     const organizeSlides = (data) => {
-        const singles = data.filter(item => item.Selected_type === 'Single')
-        const doubles = data.filter(item => item.Selected_type === 'Double')
-        const mixed = []
-        const maxLength = Math.max(singles.length, doubles.length)
-        for (let i = 0; i < maxLength; i++) {
-            if (singles[i]) mixed.push(singles[i])
-            if (doubles[i]) mixed.push(doubles[i])
-        }
-        setAlternatedSlides(mixed)
-    }
+        const singles = data.filter(item => item.Selected_type === 'Single');
+        const doubles = data.filter(item => item.Selected_type === 'Double');
+        const mixed = [];
 
-    if (!isClient) return null
+        const maxLength = Math.max(singles.length, doubles.length);
+        for (let i = 0; i < maxLength; i++) {
+            if (singles[i]) mixed.push(singles[i]);
+            if (doubles[i]) mixed.push(doubles[i]);
+        }
+
+        setAlternatedSlides(mixed);
+    };
+
+    if (!isClient) return null;
 
     return (
-        <div
-            className="pt-10 xl:pt-16 overflow-hidden"
-            onTouchStart={() => setIsPaused(true)}
-            onTouchEnd={() => setIsPaused(false)}
-        >
-            <Marquee speed={100} gradient={false} pauseOnHover={false} pauseOnClick={false} pause={isPaused}>
+        <div className="pt-10 xl:pt-16 overflow-hidden">
+            <Marquee
+                speed={100}
+                gradient={false}
+                pauseOnHover={false}
+                pause={isPaused}
+            >
                 {alternatedSlides.map((item, index) => (
-                    <div key={index} className="mx-4 w-[350px] md:w-[400px] shrink-0">
+                    <div
+                        key={index}
+                        className="mx-4 w-[350px] md:w-[400px] shrink-0"
+                        onTouchStart={() => setIsPaused(true)}
+                        onTouchEnd={() => setIsPaused(false)}
+                        onMouseDown={() => setIsPaused(true)}
+                        onMouseUp={() => setIsPaused(false)}
+                        onMouseLeave={() => setIsPaused(false)}
+                    >
                         {item.Selected_type === 'Single' ? (
                             <div className="relative rounded-2xl overflow-hidden">
                                 <img
@@ -92,8 +103,7 @@ function Banner2() {
                 ))}
             </Marquee>
         </div>
-    )
+    );
 }
 
-export default Banner2
-
+export default Banner2;
