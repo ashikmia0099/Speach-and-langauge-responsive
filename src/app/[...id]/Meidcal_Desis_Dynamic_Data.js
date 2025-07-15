@@ -11,7 +11,7 @@ export default function Meidcal_Desis_Dynamic_Data({ id }) {
   const [singledata, setSingleData] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:3000/Popular_Desise')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Popular_Desise')
       .then(res => res.json())
       .then(data => setDesies(data))
       .catch(err => console.error('Error fetching banner data:', err))

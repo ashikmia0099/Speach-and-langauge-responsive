@@ -15,7 +15,7 @@ export default function Donation_Banner() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/Donation_Text_and_Amount_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Donation_Text_and_Amount_api')
       .then(res => res.json())
       .then(data => {
         setdonationAmount(data)

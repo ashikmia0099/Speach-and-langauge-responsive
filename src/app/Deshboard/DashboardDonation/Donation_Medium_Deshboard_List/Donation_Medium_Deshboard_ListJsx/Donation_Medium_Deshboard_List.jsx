@@ -18,7 +18,7 @@ function Donation_Medium_Deshboard_List() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Donation_Medium_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Donation_Medium_api')
             .then(res => res.json())
             .then(data => {
                 setdonationMedium(data)
@@ -46,7 +46,7 @@ function Donation_Medium_Deshboard_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Donation_Medium_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Donation_Medium_api?id=${id}`, {
                         method: "DELETE"
                     })
 

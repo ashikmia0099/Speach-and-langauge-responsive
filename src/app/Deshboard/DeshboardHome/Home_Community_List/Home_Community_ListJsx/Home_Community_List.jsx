@@ -19,7 +19,7 @@ function Home_Community_List() {
     const {ourEvent, setourEvent } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:3000/Community_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Community_api')
             .then(res => res.json())
             .then(data => {
                 setourEvent(data)
@@ -49,7 +49,7 @@ function Home_Community_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Community_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Community_api?id=${id}`, {
                         method: "DELETE"
                     })
 

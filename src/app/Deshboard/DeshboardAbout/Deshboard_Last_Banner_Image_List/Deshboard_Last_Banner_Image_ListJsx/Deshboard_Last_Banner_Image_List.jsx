@@ -18,7 +18,7 @@ function Deshboard_Last_Banner_Image_List() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/About_Last_Banner_Imge_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/About_Last_Banner_Imge_api')
       .then(res => res.json())
       .then(data => {
         setbanner_last_image(data)
@@ -46,7 +46,7 @@ function Deshboard_Last_Banner_Image_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/About_Last_Banner_Imge_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/About_Last_Banner_Imge_api?id=${id}`, {
                         method: "DELETE"
                     })
 

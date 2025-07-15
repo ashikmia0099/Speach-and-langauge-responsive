@@ -26,7 +26,7 @@ function About_Three_Banner_Form() {
 
 
     useEffect(() => {
-        fetch("http://localhost:3000/About_Three_Banner_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/About_Three_Banner_api")
             .then(res => res.json())
             .then(data => {
                 setall_three_banner(data)
@@ -117,7 +117,7 @@ function About_Three_Banner_Form() {
         }
 
         try {
-            const response = await fetch(`http://localhost:3000/About_Three_Banner_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/About_Three_Banner_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postedData),

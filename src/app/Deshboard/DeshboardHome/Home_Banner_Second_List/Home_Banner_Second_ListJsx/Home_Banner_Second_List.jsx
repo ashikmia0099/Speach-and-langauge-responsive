@@ -18,7 +18,7 @@ function Home_Banner_Second_List() {
     const [alternatedSlides, setAlternatedSlides] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/Banner_sec_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Banner_sec_api')
             .then(res => res.json())
             .then(data => {
                 setSecBannerImage(data)
@@ -48,7 +48,7 @@ function Home_Banner_Second_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Banner_sec_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Banner_sec_api?id=${id}`, {
                         method: "DELETE"
                     })
 

@@ -19,7 +19,7 @@ function About_Last_Banner_Text_List() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/Last_banner_text_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Last_banner_text_api')
       .then(res => res.json())
       .then(data => {
         setlast_banner_text(data)
@@ -50,7 +50,7 @@ function About_Last_Banner_Text_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Last_banner_text_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Last_banner_text_api?id=${id}`, {
                         method: "DELETE"
                     })
 

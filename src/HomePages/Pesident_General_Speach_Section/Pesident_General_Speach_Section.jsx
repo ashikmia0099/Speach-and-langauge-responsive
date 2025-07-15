@@ -16,7 +16,7 @@ function Pesident_General_Speach_Section() {
     const { founding_member, setFoundingMember } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:3000/Founding_Member_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Founding_Member_api')
             .then(res => res.json())
             .then(data => {
                 setFoundingMember(data)

@@ -16,7 +16,7 @@ function Vission_Mission_Objective() {
     const { mission_vission_object, setmission_vission_object } = useAuth();
 
     useEffect(() => {
-        fetch('http://localhost:3000/Mission_vission_object_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Mission_vission_object_api')
             .then(res => res.json())
             .then(data => {
                 setmission_vission_object(data);

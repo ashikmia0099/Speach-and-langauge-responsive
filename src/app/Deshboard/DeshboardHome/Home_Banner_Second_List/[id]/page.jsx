@@ -26,7 +26,7 @@ function Home_Banner_Second() {
     // all banner image fetch
 
     useEffect(() => {
-        fetch('http://localhost:3000/Banner_sec_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Banner_sec_api')
             .then(res => res.json())
             .then(data => (
                 setSecBannerImage(data)
@@ -146,7 +146,7 @@ function Home_Banner_Second() {
 
 
         try {
-            const response = await fetch(`http://localhost:3000/Banner_sec_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Banner_sec_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

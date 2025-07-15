@@ -13,7 +13,7 @@ function Banner2() {
     const [alternatedSlides, setAlternatedSlides] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/Banner_sec_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Banner_sec_api')
             .then(res => res.json())
             .then(data => {
                 setSecBannerImage(data)

@@ -22,7 +22,7 @@ function About_Section_2() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/About_Last_Banner_Imge_api")
+    fetch("https://speach-and-langauge-responsive.vercel.app/About_Last_Banner_Imge_api")
       .then(res => res.json())
       .then(data => {
         setbanner_last_image(data)
@@ -40,7 +40,7 @@ function About_Section_2() {
   // fetch all text and  title data
 
   useEffect(() => {
-    fetch('http://localhost:3000/Last_banner_text_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Last_banner_text_api')
       .then(res => res.json())
       .then(data => {
         setlast_banner_text(data)

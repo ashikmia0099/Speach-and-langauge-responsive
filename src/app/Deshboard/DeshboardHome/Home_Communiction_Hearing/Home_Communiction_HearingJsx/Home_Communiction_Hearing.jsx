@@ -25,7 +25,7 @@ function Home_Communiction_Hearing() {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/Communiction_Hearing_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Communiction_Hearing_api", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

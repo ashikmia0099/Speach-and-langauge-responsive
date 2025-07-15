@@ -25,7 +25,7 @@ function Deshboard_Last_Banner_Image_List() {
 
 
     useEffect(() => {
-        fetch("http://localhost:3000/About_Last_Banner_Imge_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/About_Last_Banner_Imge_api")
             .then(res => res.json())
             .then(data => {
                 setbanner_last_image(data)
@@ -80,7 +80,7 @@ function Deshboard_Last_Banner_Image_List() {
 
 
         try {
-            const response = await fetch(`http://localhost:3000/About_Last_Banner_Imge_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/About_Last_Banner_Imge_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postedData),

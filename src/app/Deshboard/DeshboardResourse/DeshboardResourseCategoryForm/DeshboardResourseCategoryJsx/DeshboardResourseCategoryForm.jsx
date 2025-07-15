@@ -12,7 +12,7 @@ function DeshboardResourseCategoryForm() {
 
     useEffect(() => {
 
-        fetch('http://localhost:3000/Resourse_Category_One_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Resourse_Category_One_api')
             .then(res => res.json())
             .then(data => {
                 setCategoryOne(data);
@@ -38,7 +38,7 @@ function DeshboardResourseCategoryForm() {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/Resourse_Category", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Resourse_Category", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

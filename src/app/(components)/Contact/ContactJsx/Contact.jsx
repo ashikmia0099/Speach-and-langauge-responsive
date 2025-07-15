@@ -25,7 +25,7 @@ function Contact() {
 
     useEffect(() => {
 
-        fetch("http://localhost:3000/Contact_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/Contact_api")
             .then(res => res.json())
             .then(data => {
 

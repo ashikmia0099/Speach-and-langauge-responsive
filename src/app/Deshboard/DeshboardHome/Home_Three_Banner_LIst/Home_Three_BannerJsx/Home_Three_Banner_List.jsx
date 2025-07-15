@@ -19,7 +19,7 @@ function Home_Three_Banner_List() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/Three_Banner_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Three_Banner_api')
       .then(res => res.json())
       .then(data => {
         sethome_three_banner_data(data)
@@ -47,7 +47,7 @@ function Home_Three_Banner_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Three_Banner_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Three_Banner_api?id=${id}`, {
                         method: "DELETE"
                     })
 

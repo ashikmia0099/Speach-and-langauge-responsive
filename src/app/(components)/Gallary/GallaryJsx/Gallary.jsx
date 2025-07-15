@@ -6,7 +6,7 @@ function Gallary() {
     const [gallaryImage, setGallaryImage] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/Gallary_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Gallary_api')
             .then(res => res.json())
             .then(data => setGallaryImage(data));
     }, []);

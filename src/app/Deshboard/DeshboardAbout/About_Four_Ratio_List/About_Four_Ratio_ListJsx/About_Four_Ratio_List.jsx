@@ -18,7 +18,7 @@ function About_Four_Ratio_List() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/Four_Ratio_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Four_Ratio_api')
       .then(res => res.json())
       .then(data => {
         setall_Ratio(data)
@@ -46,7 +46,7 @@ function About_Four_Ratio_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Four_Ratio_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Four_Ratio_api?id=${id}`, {
                         method: "DELETE"
                     })
 

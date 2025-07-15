@@ -86,7 +86,7 @@ function About_Four_Ratio_Form() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/Four_Ratio_api", {
+      const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Four_Ratio_api", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(postedData),

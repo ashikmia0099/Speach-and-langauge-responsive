@@ -20,7 +20,7 @@ function DeshboardNewsAllDataList() {
 
     useEffect(() => {
 
-        fetch("http://localhost:3000/News_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/News_api")
             .then(res => res.json())
             .then(data => {
                 set_All_news(data)
@@ -49,7 +49,7 @@ function DeshboardNewsAllDataList() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/News_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/News_api?id=${id}`, {
                         method: "DELETE"
                     })
 

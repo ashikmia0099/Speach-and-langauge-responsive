@@ -14,7 +14,7 @@ function OurTeacher() {
 
   useEffect(()=>{
 
-    fetch('http://localhost:3000/Community_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Community_api')
     .then(res=> res.json())
     .then(data =>{
       setourEvent(data);

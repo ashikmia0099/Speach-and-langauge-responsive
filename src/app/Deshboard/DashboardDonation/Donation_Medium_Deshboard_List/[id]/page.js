@@ -23,7 +23,7 @@ function Donation_Medium_Deshboard_Update_Form() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Donation_Medium_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Donation_Medium_api')
             .then(res => res.json())
             .then(data => {
                 setdonationMedium(data)
@@ -72,7 +72,7 @@ function Donation_Medium_Deshboard_Update_Form() {
 
         try {
 
-            const response = await fetch(`http://localhost:3000/Donation_Medium_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Donation_Medium_api?id=${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

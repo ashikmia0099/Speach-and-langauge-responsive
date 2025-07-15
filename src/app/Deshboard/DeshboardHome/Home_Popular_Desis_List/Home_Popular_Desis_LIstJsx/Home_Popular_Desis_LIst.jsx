@@ -19,7 +19,7 @@ function Home_Popular_Desis_LIst() {
     const { desies, setDesies } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:3000/Popular_Desise')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Popular_Desise')
             .then(res => res.json())
             .then(data => {
                 setDesies(data)
@@ -49,7 +49,7 @@ function Home_Popular_Desis_LIst() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Banner_sec_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Banner_sec_api?id=${id}`, {
                         method: "DELETE"
                     })
 

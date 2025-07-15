@@ -26,7 +26,7 @@ function Deshboard_Last_Banner_Image_Form() {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/About_Last_Banner_Imge_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/About_Last_Banner_Imge_api", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

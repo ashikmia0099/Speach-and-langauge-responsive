@@ -14,7 +14,7 @@ function DeshboardGallaryDataForm() {
   const id = params?.id;
 
   useEffect(() => {
-    fetch("http://localhost:3000/Gallary_api")
+    fetch("https://speach-and-langauge-responsive.vercel.app/Gallary_api")
       .then(res => res.json())
       .then(data => setGallary_image(data));
   }, []);
@@ -54,7 +54,7 @@ function DeshboardGallaryDataForm() {
     };
 
     try {
-      const response = await fetch(`http://localhost:3000/Gallary_api?id=${singledata?._id}`, {
+      const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Gallary_api?id=${singledata?._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Data),

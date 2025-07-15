@@ -76,7 +76,7 @@ function Home_Founding_member_Form() {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/Founding_Member_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Founding_Member_api", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postedData),

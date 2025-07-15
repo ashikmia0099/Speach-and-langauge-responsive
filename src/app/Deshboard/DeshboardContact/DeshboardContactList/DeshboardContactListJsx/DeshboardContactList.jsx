@@ -18,7 +18,7 @@ function DeshboardContactList() {
 
     useEffect(() => {
 
-        fetch("http://localhost:3000/Contact_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/Contact_api")
             .then(res => res.json())
             .then(data => {
                 setContactData(data)
@@ -47,7 +47,7 @@ function DeshboardContactList() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Contact_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Contact_api?id=${id}`, {
                         method: "DELETE"
                     })
 

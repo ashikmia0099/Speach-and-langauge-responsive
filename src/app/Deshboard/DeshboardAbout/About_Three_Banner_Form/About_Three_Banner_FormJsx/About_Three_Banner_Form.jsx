@@ -79,7 +79,7 @@ function About_Three_Banner_Form() {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/About_Three_Banner_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/About_Three_Banner_api", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postedData),

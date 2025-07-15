@@ -26,7 +26,7 @@ function About_Image_Data() {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/About_Slide_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/About_Slide_api", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

@@ -64,7 +64,7 @@ function Home_Banner_Form() {
 
 
         try {
-            const response = await fetch("http://localhost:3000/Banner_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Banner_api", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

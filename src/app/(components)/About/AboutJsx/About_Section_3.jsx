@@ -27,7 +27,7 @@ function About_Section_3() {
 
 
     useEffect(() => {
-        fetch("http://localhost:3000/About_Three_Banner_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/About_Three_Banner_api")
             .then(res => res.json())
             .then(data => {
                 setall_three_banner(data)

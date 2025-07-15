@@ -25,7 +25,7 @@ function Donation_Medium_Deshboard_Form() {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/Donation_Medium_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Donation_Medium_api", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

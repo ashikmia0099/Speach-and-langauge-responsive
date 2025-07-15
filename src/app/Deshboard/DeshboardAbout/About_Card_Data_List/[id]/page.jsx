@@ -23,7 +23,7 @@ function About_Image_Data_Update() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/About_Slide_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/About_Slide_api')
             .then(res => res.json())
             .then(data => {
                 const dataWithIds = data.map((item, index) => ({ id: index + 1, ...item }))
@@ -67,7 +67,7 @@ function About_Image_Data_Update() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/About_Slide_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/About_Slide_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

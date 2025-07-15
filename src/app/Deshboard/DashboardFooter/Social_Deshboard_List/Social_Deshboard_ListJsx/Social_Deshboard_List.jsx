@@ -16,7 +16,7 @@ function Social_Deshboard_List() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/social_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/social_api')
       .then(res => res.json())
       .then(data => {
         setSocial_link(data)
@@ -44,7 +44,7 @@ function Social_Deshboard_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/social_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/social_api?id=${id}`, {
                         method: "DELETE"
                     })
 

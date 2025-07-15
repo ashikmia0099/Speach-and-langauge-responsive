@@ -59,7 +59,7 @@ function DeshboardGallaryDataForm() {
 
 
     try {
-      const response = await fetch("http://localhost:3000/Gallary_api", {
+      const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Gallary_api", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Data),

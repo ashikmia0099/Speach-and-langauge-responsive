@@ -21,7 +21,7 @@ function DeshboardNewsAllDataForm() {
 
     useEffect(() => {
 
-        fetch("http://localhost:3000/News_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/News_api")
             .then(res => res.json())
             .then(data => {
                 const dataWithIds = data.map((item, index) => ({ id: index + 1, ...item }))
@@ -77,7 +77,7 @@ function DeshboardNewsAllDataForm() {
         
 
        try {
-             const response = await fetch(`http://localhost:3000/News_api?id=${id}`, {
+             const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/News_api?id=${id}`, {
                method: 'PUT',
                headers: { 'Content-Type': 'application/json' },
                body: JSON.stringify(blogsData),

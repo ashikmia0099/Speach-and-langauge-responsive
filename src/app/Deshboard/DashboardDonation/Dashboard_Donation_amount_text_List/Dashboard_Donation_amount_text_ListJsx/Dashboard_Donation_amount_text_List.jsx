@@ -18,7 +18,7 @@ function Dashboard_Donation_amount_text_List() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/Donation_Text_and_Amount_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Donation_Text_and_Amount_api')
       .then(res => res.json())
       .then(data => {
         setdonationAmount(data)
@@ -46,7 +46,7 @@ function Dashboard_Donation_amount_text_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Donation_Text_and_Amount_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Donation_Text_and_Amount_api?id=${id}`, {
                         method: "DELETE"
                     })
 

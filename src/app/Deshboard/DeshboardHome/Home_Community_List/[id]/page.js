@@ -33,7 +33,7 @@ function Home_Community_Update_Form() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Community_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Community_api')
             .then(res => res.json())
             .then(data => {
                 setourEvent(data)
@@ -81,7 +81,7 @@ function Home_Community_Update_Form() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/Community_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Community_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

@@ -18,7 +18,7 @@ function DeshboardGallaryDataList() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/Gallary_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Gallary_api')
       .then(res => res.json())
       .then(data => {
         setGallary_image(data)
@@ -46,7 +46,7 @@ function DeshboardGallaryDataList() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Gallary_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Gallary_api?id=${id}`, {
                         method: "DELETE"
                     })
 

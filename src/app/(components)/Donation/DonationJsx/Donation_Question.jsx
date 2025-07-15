@@ -26,7 +26,7 @@ export default function Donation_Question() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/Donation_question_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Donation_question_api')
       .then(res => res.json())
       .then(data => {
         setdonationquestion(data)

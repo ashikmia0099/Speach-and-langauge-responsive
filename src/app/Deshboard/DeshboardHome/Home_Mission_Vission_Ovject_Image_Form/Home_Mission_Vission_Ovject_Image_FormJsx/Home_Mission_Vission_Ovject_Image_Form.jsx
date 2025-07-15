@@ -95,7 +95,7 @@ function Home_Mission_Vission_Ovject_Image_Form() {
   
 
     try {
-      const response = await fetch("http://localhost:3000/Mission_vission_object_api", {
+      const response = await fetch("https://speach-and-langauge-responsive.vercel.app/Mission_vission_object_api", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(blogsData),

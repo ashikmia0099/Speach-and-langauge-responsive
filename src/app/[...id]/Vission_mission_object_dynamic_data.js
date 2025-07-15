@@ -23,7 +23,7 @@ function Vission_mission_object_dynamic_data({ id }) {
     const [singledata, setSingleData] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:3000/Mission_vission_object_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Mission_vission_object_api')
             .then(res => res.json())
             .then(data => setmission_vission_object(data))
             .catch(err => console.error('Error fetching banner data:', err))

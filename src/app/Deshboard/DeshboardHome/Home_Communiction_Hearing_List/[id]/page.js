@@ -24,7 +24,7 @@ function Home_Communiction_Hearing_Update_form() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Communiction_Hearing_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Communiction_Hearing_api')
             .then(res => res.json())
             .then(data => {
                 setQuestion(data)
@@ -62,7 +62,7 @@ function Home_Communiction_Hearing_Update_form() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/Communiction_Hearing_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Communiction_Hearing_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

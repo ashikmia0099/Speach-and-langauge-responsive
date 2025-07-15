@@ -17,7 +17,7 @@ function About_Card_Data_List() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/About_Slide_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/About_Slide_api')
       .then(res => res.json())
       .then(data => {
         setabout_all_Image(data)
@@ -45,7 +45,7 @@ function About_Card_Data_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/About_Slide_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/About_Slide_api?id=${id}`, {
                         method: "DELETE"
                     })
 

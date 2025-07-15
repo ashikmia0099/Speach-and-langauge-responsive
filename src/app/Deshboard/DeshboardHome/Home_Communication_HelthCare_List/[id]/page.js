@@ -31,7 +31,7 @@ function Home_Communication_HelthCare_Update_Form() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Communication_HelthCare_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Communication_HelthCare_api')
             .then(res => res.json())
             .then(data => {
                 setHealthCare(data)
@@ -89,7 +89,7 @@ function Home_Communication_HelthCare_Update_Form() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/Communication_HelthCare_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Communication_HelthCare_api?id=${id}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

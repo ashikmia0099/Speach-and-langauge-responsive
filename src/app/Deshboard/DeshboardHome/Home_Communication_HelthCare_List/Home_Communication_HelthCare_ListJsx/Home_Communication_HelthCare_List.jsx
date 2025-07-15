@@ -20,7 +20,7 @@ function Home_Communication_HelthCare_List() {
     const { healthCare, setHealthCare } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:3000/Communication_HelthCare_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Communication_HelthCare_api')
             .then(res => res.json())
             .then(data => {
                 setHealthCare(data)
@@ -54,7 +54,7 @@ function Home_Communication_HelthCare_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Communication_HelthCare_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Communication_HelthCare_api?id=${id}`, {
                         method: "DELETE"
                     })
 

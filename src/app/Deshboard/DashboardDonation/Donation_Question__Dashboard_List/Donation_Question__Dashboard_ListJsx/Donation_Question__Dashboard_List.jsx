@@ -18,7 +18,7 @@ function Donation_Question__Dashboard_List() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Donation_question_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Donation_question_api')
             .then(res => res.json())
             .then(data => {
                 setdonationquestion(data)
@@ -46,7 +46,7 @@ function Donation_Question__Dashboard_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Donation_question_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Donation_question_api?id=${id}`, {
                         method: "DELETE"
                     })
 

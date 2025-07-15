@@ -20,7 +20,7 @@ function Footer() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/social_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/social_api')
             .then(res => res.json())
             .then(data => {
                 setSocial_link(data)
@@ -34,7 +34,7 @@ function Footer() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Contact_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Contact_api')
             .then(res => res.json())
             .then(data => {
                 setContactData(data)

@@ -21,7 +21,7 @@ function Mission_Three_banner() {
 
 
     useEffect(() => {
-        fetch("http://localhost:3000/Three_Banner_api")
+        fetch("https://speach-and-langauge-responsive.vercel.app/Three_Banner_api")
             .then(res => res.json())
             .then(data => {
                 sethome_three_banner_data(data)

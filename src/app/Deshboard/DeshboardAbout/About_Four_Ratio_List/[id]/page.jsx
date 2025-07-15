@@ -29,7 +29,7 @@ function About_Four_Ratio_Update_Form() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Four_Ratio_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Four_Ratio_api')
             .then(res => res.json())
             .then(data => {
                 const datawithides = data.map((item, index) => ({ id: index + 1, ...item }))
@@ -118,7 +118,7 @@ function About_Four_Ratio_Update_Form() {
         }
 
         try {
-            const response = await fetch(`http://localhost:3000/Four_Ratio_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Four_Ratio_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postedData),

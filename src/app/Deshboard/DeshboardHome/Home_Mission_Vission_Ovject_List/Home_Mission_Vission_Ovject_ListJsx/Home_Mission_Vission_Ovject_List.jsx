@@ -19,7 +19,7 @@ function Home_Mission_Vission_Ovject_List() {
     const { mission_vission_object, setmission_vission_object } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:3000/Mission_vission_object_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Mission_vission_object_api')
             .then(res => res.json())
             .then(data => {
                 setmission_vission_object(data)
@@ -49,7 +49,7 @@ function Home_Mission_Vission_Ovject_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Mission_vission_object_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Mission_vission_object_api?id=${id}`, {
                         method: "DELETE"
                     })
 

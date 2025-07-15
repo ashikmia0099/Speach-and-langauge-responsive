@@ -19,7 +19,7 @@ function News() {
     const [selectedNews, setSelectedNews] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:3000/News_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/News_api')
             .then(res => res.json())
             .then(data => {
                 const dataWithIds = data

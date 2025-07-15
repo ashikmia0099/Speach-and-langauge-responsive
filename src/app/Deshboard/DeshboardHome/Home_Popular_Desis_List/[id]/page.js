@@ -22,7 +22,7 @@ function Home_Popular_Desis_Update_Form() {
     const id = params?.id;
 
     useEffect(() => {
-        fetch('http://localhost:3000/Popular_Desise')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Popular_Desise')
             .then(res => res.json())
             .then(data => {
                 setDesies(data)
@@ -100,7 +100,7 @@ function Home_Popular_Desis_Update_Form() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/Popular_Desise?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Popular_Desise?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(blogsData),

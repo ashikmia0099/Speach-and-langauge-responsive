@@ -65,7 +65,7 @@ const selectedTypeTwoImages = apiImages.slice(-20);
   // fetch all titel text
 
   useEffect(() => {
-    fetch('http://localhost:3000/About_Title_Text_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/About_Title_Text_api')
       .then(res => res.json())
       .then(data => {
         setall_title_text(data)
@@ -78,7 +78,7 @@ const selectedTypeTwoImages = apiImages.slice(-20);
   // fetch all image
 
   useEffect(() => {
-    fetch('http://localhost:3000/About_Slide_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/About_Slide_api')
       .then(res => res.json())
       .then(data => {
         setabout_all_Image(data)

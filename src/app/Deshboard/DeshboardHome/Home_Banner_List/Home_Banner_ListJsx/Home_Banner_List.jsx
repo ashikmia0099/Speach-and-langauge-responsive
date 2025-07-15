@@ -18,7 +18,7 @@ function Home_Banner_List() {
     const { banner_data, setbanner_data } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:3000/Banner_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Banner_api')
             .then(res => res.json())
             .then(data => {
                 setbanner_data(data)
@@ -48,7 +48,7 @@ function Home_Banner_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Banner_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Banner_api?id=${id}`, {
                         method: "DELETE"
                     })
 

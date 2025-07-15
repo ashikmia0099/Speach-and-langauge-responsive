@@ -8,7 +8,7 @@ export default function Communication_Hearing_Data({ id }) {
   const [singledata, setSingleData] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:3000/Communication_HelthCare_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Communication_HelthCare_api')
       .then(res => res.json())
       .then(data => {
         const updated = data.map(item => ({

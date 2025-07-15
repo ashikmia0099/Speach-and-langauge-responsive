@@ -19,7 +19,7 @@ function About_Title_Text() {
       // fetch all titel text
     
       useEffect(() => {
-        fetch('http://localhost:3000/About_Title_Text_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/About_Title_Text_api')
           .then(res => res.json())
           .then(data => {
             setall_title_text(data)
@@ -52,7 +52,7 @@ function About_Title_Text() {
 
 
         try {
-            const response = await fetch("http://localhost:3000/About_Title_Text_api", {
+            const response = await fetch("https://speach-and-langauge-responsive.vercel.app/About_Title_Text_api", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postedData),

@@ -7,7 +7,7 @@ export default function Donation_Card() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/Donation_Medium_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Donation_Medium_api')
             .then(res => res.json())
             .then(data => {
                 setdonationMedium(data)

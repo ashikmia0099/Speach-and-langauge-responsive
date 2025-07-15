@@ -19,7 +19,7 @@ function About_Last_Banner_Text_Upadate_Form() {
     
     
       useEffect(() => {
-        fetch('http://localhost:3000/Last_banner_text_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Last_banner_text_api')
           .then(res => res.json())
           .then(data => {
             setlast_banner_text(data)
@@ -64,7 +64,7 @@ function About_Last_Banner_Text_Upadate_Form() {
 
 
         try {
-            const response = await fetch(`http://localhost:3000/Last_banner_text_api?id=${id}`, {
+            const response = await fetch(`https://speach-and-langauge-responsive.vercel.app/Last_banner_text_api?id=${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postedData),

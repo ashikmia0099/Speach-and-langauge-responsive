@@ -18,7 +18,7 @@ function Home_Founding_Member_Data_List() {
     const { founding_member, setFoundingMember } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:3000/Founding_Member_api')
+        fetch('https://speach-and-langauge-responsive.vercel.app/Founding_Member_api')
             .then(res => res.json())
             .then(data => {
                 setFoundingMember(data)
@@ -48,7 +48,7 @@ function Home_Founding_Member_Data_List() {
             if (result.isConfirmed) {
                 try {
 
-                    const res = await fetch(`http://localhost:3000/Founding_Member_api?id=${id}`, {
+                    const res = await fetch(`https://speach-and-langauge-responsive.vercel.app/Founding_Member_api?id=${id}`, {
                         method: "DELETE"
                     })
 

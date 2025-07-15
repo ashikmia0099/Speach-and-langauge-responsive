@@ -32,7 +32,7 @@ function Banner1() {
   const [apiImages, setApiImages] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/Banner_api')
+    fetch('https://speach-and-langauge-responsive.vercel.app/Banner_api')
       .then(res => res.json())
       .then(data => {
         setbanner_data(data);
