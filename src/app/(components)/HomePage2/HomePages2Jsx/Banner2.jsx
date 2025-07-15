@@ -1,16 +1,20 @@
-'use client'
 
-import React, { useEffect, useState } from 'react'
+
+
+'use client'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoArrowForwardSharp } from 'react-icons/io5'
 import { useAuth } from '../../../../../Context/AuthContext/AuthContext'
 import Marquee from "react-fast-marquee";
+import '../localcss/banner1.css';
 
 function Banner2() {
     const [isClient, setIsClient] = useState(false)
     const { second_banner_image, setSecBannerImage } = useAuth()
     const [alternatedSlides, setAlternatedSlides] = useState([])
+    const [isPaused, setIsPaused] = useState(false)
 
     useEffect(() => {
         fetch('https://speach-and-langauge-responsive.vercel.app/Banner_sec_api')
@@ -29,21 +33,23 @@ function Banner2() {
         const singles = data.filter(item => item.Selected_type === 'Single')
         const doubles = data.filter(item => item.Selected_type === 'Double')
         const mixed = []
-
         const maxLength = Math.max(singles.length, doubles.length)
         for (let i = 0; i < maxLength; i++) {
             if (singles[i]) mixed.push(singles[i])
             if (doubles[i]) mixed.push(doubles[i])
         }
-
         setAlternatedSlides(mixed)
     }
 
     if (!isClient) return null
 
     return (
-        <div className="pt-10 xl:pt-16 overflow-hidden">
-            <Marquee speed={100} gradient={false} pauseOnHover={true}>
+        <div
+            className="pt-10 xl:pt-16 overflow-hidden"
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+        >
+            <Marquee speed={100} gradient={false} pauseOnHover={false} pauseOnClick={false} pause={isPaused}>
                 {alternatedSlides.map((item, index) => (
                     <div key={index} className="mx-4 w-[350px] md:w-[400px] shrink-0">
                         {item.Selected_type === 'Single' ? (
@@ -65,7 +71,7 @@ function Banner2() {
                                 </div>
                             </div>
                         ) : (
-                            <div className="space-y-4 h-700px]">
+                            <div className="space-y-4">
                                 {item.Choose_Dual_Type_Image_1 && (
                                     <img
                                         src={item.Choose_Dual_Type_Image_1}
@@ -90,3 +96,4 @@ function Banner2() {
 }
 
 export default Banner2
+
