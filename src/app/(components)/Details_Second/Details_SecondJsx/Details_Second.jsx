@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaArrowLeft } from 'react-icons/fa'
 
-import detailsImage from '../../../../../public/images/bannerimg.jpg'
+// import detailsImage from '../../../../../public/images/bannerimg.jpg'
 import Image from 'next/image'
 
 function Details_Second() {
@@ -25,7 +25,7 @@ function Details_Second() {
                     </div>
                     {/* image section */}
                     <div className=' pb-10'>
-                        <Image src={detailsImage} className=' rounded-2xl h-[700px]'></Image>
+                        {/* <Image src={detailsImage} className=' rounded-2xl h-[700px]'></Image> */}
                     </div>
                     {/* grid section */}
                     <div className=''>
